@@ -24,8 +24,8 @@ class UpgradeAlert extends UpgradeBase {
       print('upgrader: build UpgradeAlert');
     }
 
-    return StreamBuilder(
-      stream: state.widget.upgrader.evaluationStream,
+    return FutureBuilder(
+      stream: state.widget.upgrader.initialize(),
       builder:
           (BuildContext context, AsyncSnapshot<UpgraderEvaluateNeed> snapshot) {
         final checkContext =
