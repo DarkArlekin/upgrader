@@ -25,7 +25,7 @@ class UpgradeAlert extends UpgradeBase {
     }
 
     return FutureBuilder(
-      stream: state.widget.upgrader.initialize(),
+      future: state.widget.upgrader.initialize(),
       builder:
           (BuildContext context, AsyncSnapshot<UpgraderEvaluateNeed> snapshot) {
         final checkContext =
